@@ -1,6 +1,7 @@
 module.exports = {
   name: 'interop-app',
+  filename: 'remoteEntry.js',
   exposes: {
-    './Module': './src/remote-entry.ts',
+    '.': 'apps/interop-app/src/remote-entry.ts',
   },
 };

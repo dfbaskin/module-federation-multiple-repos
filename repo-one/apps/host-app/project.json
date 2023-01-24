@@ -12,29 +12,29 @@
       "options": {
         "outputPath": "dist/apps/host-app",
         "compiler": "babel",
-        "main": "apps/host-app/src/main.ts",
-        "tsConfig": "apps/host-app/tsconfig.app.json",
-        "webpackConfig": "apps/host-app/webpack.config.js",
-        "assets": ["apps/host-app/src/favicon.ico", "apps/host-app/src/assets"],
         "index": "apps/host-app/src/index.html",
         "baseHref": "/",
+        "main": "apps/host-app/src/main.ts",
+        "tsConfig": "apps/host-app/tsconfig.app.json",
+        "assets": ["apps/host-app/src/favicon.ico", "apps/host-app/src/assets"],
         "styles": ["apps/host-app/src/styles.scss"],
-        "scripts": []
+        "scripts": [],
+        "webpackConfig": "apps/host-app/webpack.config.js"
       },
       "configurations": {
         "production": {
-          "optimization": true,
-          "outputHashing": "all",
-          "sourceMap": false,
-          "namedChunks": false,
-          "extractLicenses": true,
-          "vendorChunk": false,
           "fileReplacements": [
             {
               "replace": "apps/host-app/src/environments/environment.ts",
               "with": "apps/host-app/src/environments/environment.prod.ts"
             }
-          ]
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
         }
       }
     },
