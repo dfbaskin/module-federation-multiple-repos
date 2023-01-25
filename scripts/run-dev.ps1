@@ -3,23 +3,26 @@ $rootPath = Join-Path $PSScriptRoot ".." -Resolve
 $commands = @(
     @{
         Title = "Host App"
-        Command = "dotnet serve --directory .\repo-one\dist\apps\host-app\ --port 4200"
+        Path = "repo-one"
+        Command = "npx nx serve host-app"
     }
     @{
         Title = "Module One"
-        Command = "dotnet serve --directory .\repo-one\dist\apps\interop-app\ --port 4201 --cors"
+        Path = "repo-one"
+        Command = "npx nx serve interop-app"
     }
     @{
         Title = "Module Two"
-        Command = "dotnet serve --directory .\repo-two\dist\apps\addon-app\ --port 4202 --cors"
+        Path = "repo-two"
+        Command = "npx nx serve addon-app"
     }
 )
-
-Push-Location -Path $rootPath
 
 $commands |
     ForEach-Object {
         $cmd = $_
+
+        Push-Location -Path $(join-path $rootPath $cmd.Path)
 
         $script = @"
 Write-Output "Starting $($cmd.Title)`"
@@ -40,6 +43,6 @@ $($cmd.Command)
             )
         }
         Start-Process @options
-    }
 
-Pop-Location
+        Pop-Location
+    }

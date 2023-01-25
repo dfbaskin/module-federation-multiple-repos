@@ -42,6 +42,7 @@ export class AppElement extends HTMLElement {
             <button type="button" name="red">Add Red</button>
             <button type="button" name="blue">Add Blue</button>
             <button type="button" name="green">Add Green</button>
+            <button type="button" name="orange">Add Orange</button>
             <button type="button" name="CLEAR">Clear</button>
           </div>
         </fieldset>
