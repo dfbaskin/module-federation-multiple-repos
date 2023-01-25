@@ -1,0 +1,9 @@
+.custom-orange {
+  width: auto;
+  color: darkblue;
+  min-width: 16rem;
+  min-height: 6rem;
+  background-color: orange;
+  padding: 1rem;
+  position: relative;
+}

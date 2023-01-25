@@ -1,1 +1,1 @@
-export * from './lib/additional';
+export { CustomOrange } from './lib/customOrange';
