@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@example/components": ["libs/components/src/index.ts"]
+      "@example/components": ["libs/components/src/index.ts"],
+      "@example/interop": ["libs/interop/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

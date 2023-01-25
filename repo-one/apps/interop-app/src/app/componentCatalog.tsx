@@ -1,6 +1,5 @@
 import { lazy } from 'react';
-import { registerInteropCustomElement } from './componentInteropWrapper';
-import { InteropComponent } from './interopComponent';
+import { registerInteropCustomElement, InteropComponent } from '@example/interop';
 
 const CustomRed = lazy(() =>
   import('@example/components').then(({ CustomRed }) => ({

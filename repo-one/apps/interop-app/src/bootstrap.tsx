@@ -2,7 +2,7 @@ import { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 
-import { InteropComponents } from './app/interopComponents';
+import { InteropComponents } from '@example/interop';
 
 import './app/componentCatalog';
 
